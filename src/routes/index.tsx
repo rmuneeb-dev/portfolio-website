@@ -1525,10 +1525,10 @@ function DesignMockup({
 const TIMELINE = [
   {
     icon: Palette,
-    role: "UI/UX Designer Intern",
+    role: " junior UI/UX Designer & frontend developer ",
     org: "BitslabStudio ",
     when: "2026",
-    body: "Shipped onboarding & dashboard flows for B2B SaaS clients.",
+    body: "Shipped onboarding & dashboard flows for B2B SaaS clientsDesigned and developed responsive UI components and modern dashboard interfaces..",
   },
   {
     icon: Briefcase,
