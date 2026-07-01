@@ -91,8 +91,11 @@ function Index() {
       <main className="relative z-10 mx-auto max-w-[1280px] px-4 pb-24 pt-20 lg:pl-28 lg:pr-8 lg:pt-10">
         <Hero />
         <About />
+        <WhyHireMe />
         <Skills />
         <FeaturedProject />
+        <Achievements />
+        <CurrentlyLearning />
         <DesignShowcase />
         <Experience />
         <TechAndGithub />
@@ -173,15 +176,18 @@ function Hero() {
       <div className="glass relative col-span-12 overflow-hidden rounded-3xl p-8 lg:col-span-8 lg:p-12">
         <div className="relative z-10">
           <SectionLabel>portfolio // online</SectionLabel>
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[color:var(--color-signal)]/30 bg-[color:var(--color-signal)]/10 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.24em] text-[color:var(--color-signal)]">
+            <span className="h-1.5 w-1.5 rounded-full bg-[color:var(--color-signal)]" />
+            Available for Full-Time • Freelance • Remote
+          </div>
           <h1 className="font-display text-5xl font-semibold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
-            Muneeb
+            Frontend
             <br />
-            <span className="text-signal-gradient">Rehman_</span>
+            <span className="text-signal-gradient">Developer</span>
             <span className="ml-1 inline-block h-[0.9em] w-[3px] translate-y-1 bg-[color:var(--color-signal)] animate-blink" />
           </h1>
-          <p className="mt-5 max-w-xl text-base text-muted-foreground sm:text-lg">
-            Frontend developer & UI/UX designer building precise, performant
-            interfaces — where engineering rigor meets a designer's eye.
+          <p className="mt-5 max-w-2xl text-base text-muted-foreground sm:text-lg">
+            I build fast, responsive, and accessible web applications using React, TypeScript, and modern frontend technologies. Passionate about transforming complex ideas into clean, intuitive digital experiences with a strong focus on performance, usability, and scalable UI architecture.
           </p>
           <div className="mt-7 flex flex-wrap items-center gap-3">
             <a
@@ -271,7 +277,7 @@ function About() {
     <section id="about" className="mt-16">
       <SectionLabel>about_me</SectionLabel>
       <h2 className="mb-8 text-3xl font-semibold tracking-tight sm:text-4xl">
-        Engineer's discipline, <span className="text-signal-gradient">designer's intent.</span>
+        Building thoughtful digital experiences with <span className="text-signal-gradient">precision and purpose.</span>
       </h2>
 
       <div className="grid gap-4 lg:grid-cols-12">
@@ -287,35 +293,35 @@ function About() {
             />
           </div>
           <span className="font-script text-3xl text-[color:var(--color-signal)]">~ Muneeb</span>
-          <p className="text-center text-sm text-muted-foreground">
-            CS undergrad. Frontend by trade, designer by instinct.
+          <p className="text-center text-sm leading-6 text-muted-foreground">
+            I'm Muneeb Rehman, a Frontend Developer with a passion for building modern, responsive, and user-focused web applications.
           </p>
         </div>
 
         <div className="col-span-12 grid gap-4 sm:grid-cols-2 lg:col-span-8">
           <AboutCard
             icon={GraduationCap}
-            label="// education"
-            title="BS Computer Science"
-            body="university of south asia Lahore.."
+            label="// background"
+            title="Design-minded developer"
+            body="My background in UI/UX design helps me bridge the gap between visual storytelling and technical execution."
           />
           <AboutCard
             icon={Layout}
-            label="// focus"
-            title="Web interfaces"
-            body="React / Next.js apps with thoughtful interaction design and motion."
+            label="// stack"
+            title="React & TypeScript"
+            body="I enjoy turning complex problems into intuitive digital experiences using modern frontend technologies."
           />
           <AboutCard
             icon={Sparkles}
-            label="// passion"
-            title="Design × Code"
-            body="Closing the gap between Figma files and production with care."
+            label="// quality"
+            title="Accessible by default"
+            body="From wireframes to deployment, I focus on clean code, accessibility, performance, and scalable architecture."
           />
           <AboutCard
             icon={ArrowRight}
-            label="// goal"
-            title="Ship work that lasts"
-            body="Build products people actually want to come back to."
+            label="// growth"
+            title="Always evolving"
+            body="I’m constantly learning new tools, refining my workflow, and exploring AI-powered development practices."
           />
         </div>
       </div>
@@ -345,6 +351,79 @@ function AboutCard({
       <h3 className="text-lg font-semibold">{title}</h3>
       <p className="mt-1 text-sm text-muted-foreground">{body}</p>
     </div>
+  );
+}
+
+const WHY_HIRE_ME_CARDS = [
+  {
+    icon: Activity,
+    title: "Performance Focused",
+    body: "Optimize applications with lazy loading, code splitting, image optimization, and Core Web Vitals best practices.",
+  },
+  {
+    icon: Smartphone,
+    title: "Responsive Design",
+    body: "Develop mobile-first interfaces that provide a seamless experience across desktop, tablet, and mobile devices.",
+  },
+  {
+    icon: Sparkles,
+    title: "UI/UX Mindset",
+    body: "Transform Figma designs into polished, intuitive interfaces with attention to detail and usability.",
+  },
+  {
+    icon: Code2,
+    title: "Clean & Scalable Code",
+    body: "Build reusable React components using TypeScript and maintainable frontend architecture.",
+  },
+  {
+    icon: Layout,
+    title: "Accessibility First",
+    body: "Follow semantic HTML, keyboard navigation, proper color contrast, and accessibility best practices.",
+  },
+  {
+    icon: Globe,
+    title: "AI-Assisted Development",
+    body: "Leverage Cursor AI, GitHub Copilot, ChatGPT, Claude, Lovable, and Bolt.new to improve productivity while maintaining production-quality code.",
+  },
+];
+
+function WhyHireMe() {
+  return (
+    <section id="why-hire-me" className="mt-16">
+      <Reveal>
+        <SectionLabel>why_hire_me</SectionLabel>
+      </Reveal>
+      <Reveal delay={80}>
+        <div className="mb-8">
+          <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
+            Why <span className="text-signal-gradient">Hire Me</span>
+          </h2>
+          <p className="mt-3 max-w-2xl text-sm text-muted-foreground sm:text-base">
+            I combine strong UI/UX thinking with modern frontend engineering to create responsive, accessible, and high-performance web applications. My focus is on building clean, scalable, and user-centered digital experiences that solve real problems.
+          </p>
+        </div>
+      </Reveal>
+
+      <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+        {WHY_HIRE_ME_CARDS.map((card, index) => {
+          const Icon = card.icon;
+          return (
+            <Reveal key={card.title} delay={index * 70}>
+              <div className="group h-full rounded-3xl border border-[color:var(--color-border)] bg-[color:var(--color-surface)]/40 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-[color:var(--color-signal)]/40 hover:shadow-[0_0_24px_-10px_color-mix(in_oklab,var(--color-signal)_55%,transparent)]">
+                <div className="mb-4 flex items-center gap-2">
+                  <span className="grid h-9 w-9 place-items-center rounded-2xl bg-[color:var(--color-signal)]/15 text-[color:var(--color-signal)]">
+                    <Icon className="h-4 w-4" />
+                  </span>
+                  <span className="label-mono">// value</span>
+                </div>
+                <h3 className="text-lg font-semibold tracking-tight">{card.title}</h3>
+                <p className="mt-2 text-sm leading-6 text-muted-foreground">{card.body}</p>
+              </div>
+            </Reveal>
+          );
+        })}
+      </div>
+    </section>
   );
 }
 
@@ -492,6 +571,7 @@ const FEATURED = [
     blurb:
       "Modern real-time chatting experience with instant messaging, presence, rich conversations, and a polished mobile-first UI.",
     tech: ["React", "Firebase", "Tailwind", "Socket.io"],
+    highlights: ["Responsive Design", "TypeScript", "Performance Optimized", "Mobile First"],
     caseStudyKey: "connect-x",
     figmaUrl: "https://www.figma.com/design/WAPMhZFr5XftEBlrzX8eUb/Connect-X?node-id=0-1&p=f&t=lvtZ7Py9UNg8Iu1j-0",
     image: connectXPreview,
@@ -502,6 +582,7 @@ const FEATURED = [
     blurb:
       "Django and Chart.js dashboard surfacing live threat telemetry with custom filters, timeline views, and incident monitoring.",
     tech: ["Django", "Chart.js", "Postgres"],
+    highlights: ["Responsive Design", "Performance Optimized", "Modern UI", "GitHub Repository"],
     caseStudyKey: "threat-watch",
     github: "https://github.com/rmuneeb-dev/Threat-watch",
     image: threatWatchPreview,
@@ -512,6 +593,7 @@ const FEATURED = [
     blurb:
       "Online store for airbuds, headphones, earbuds, wireless audio accessories, and related electronics with a smooth shopping experience.",
     tech: ["React", "TypeScript", "Stripe", "Tailwind"],
+    highlights: ["Responsive Design", "TypeScript", "Modern UI", "Component Based"],
     caseStudyKey: "flow-go",
     figmaUrl: "https://www.figma.com/design/ukQrtvZbRGlKU89rBKCc38/Flow-Go-Design?node-id=0-1&p=f&t=P0sAy1GRxNz4Aptw-0",
     image: flowGoPreview,
@@ -522,6 +604,7 @@ const FEATURED = [
     blurb:
       "Sticker collection and shopping application focused on browsing, favorites, and a delightful digital storefront experience.",
     tech: ["Next.js", "React", "Postgres", "Stripe"],
+    highlights: ["Responsive Design", "Modern UI", "Mobile First", "SEO Friendly"],
     caseStudyKey: "tubbz",
     figmaUrl: "https://www.figma.com/design/SbAAe9JQxiRAxOBPxc5iSw/Tubbzz?node-id=0-1&p=f&t=9bBOQE34M2h6adKp-0",
     image: tubbzPreview,
@@ -531,6 +614,7 @@ const FEATURED = [
     tag: "OS simulation",
     blurb: "Visual simulator for FCFS, SJF, and Round Robin scheduling with live process timelines and queue behavior.",
     tech: ["C++", "SFML", "Algorithms"],
+    highlights: ["Performance Optimized", "Component Based", "Modern UI", "GitHub Repository"],
     caseStudyKey: "process-scheduler",
     github: "https://github.com/rmuneeb-dev/OS-Ai-command-center-",
     image: processSchedulerPreview,
@@ -1104,6 +1188,126 @@ function ResumePreviewModal({
   );
 }
 
+const LEARNING_CARDS = [
+  {
+    title: "Next.js",
+    status: "In Progress",
+    description: "Learning server-side rendering, routing, and production-ready React applications.",
+    icon: Server,
+  },
+  {
+    title: "Advanced TypeScript",
+    status: "In Progress",
+    description: "Improving type safety, generics, utility types, and scalable application architecture.",
+    icon: Code2,
+  },
+  {
+    title: "Testing",
+    status: "In Progress",
+    description: "Learning Vitest, Jest, and Playwright for reliable frontend testing.",
+    icon: Cpu,
+  },
+  {
+    title: "Animations",
+    status: "In Progress",
+    description: "Creating smooth and performant interactions using Framer Motion.",
+    icon: Sparkles,
+  },
+  {
+    title: "Performance Optimization",
+    status: "In Progress",
+    description: "Improving Lighthouse scores, Core Web Vitals, lazy loading, image optimization, and bundle splitting.",
+    icon: Activity,
+  },
+  {
+    title: "AI Development Workflow",
+    status: "In Progress",
+    description: "Using Cursor AI, GitHub Copilot, ChatGPT, Claude, Lovable, and Bolt.new to accelerate development while maintaining clean, production-quality code.",
+    icon: Globe,
+  },
+];
+
+function CurrentlyLearning() {
+  return (
+    <section id="learning" className="mt-16">
+      <Reveal>
+        <SectionLabel>currently_learning</SectionLabel>
+      </Reveal>
+      <Reveal delay={80}>
+        <div className="mb-8">
+          <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
+            Currently <span className="text-signal-gradient">Learning</span>
+          </h2>
+          <p className="mt-3 max-w-2xl text-sm text-muted-foreground sm:text-base">
+            I believe continuous learning is essential in frontend development. I'm currently expanding my knowledge in modern frameworks, advanced UI engineering, performance optimization, and AI-assisted development workflows.
+          </p>
+        </div>
+      </Reveal>
+
+      <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+        {LEARNING_CARDS.map((card, index) => {
+          const Icon = card.icon;
+          return (
+            <Reveal key={card.title} delay={index * 70}>
+              <div className="group h-full rounded-3xl border border-[color:var(--color-border)] bg-[color:var(--color-surface)]/40 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-[color:var(--color-signal)]/40 hover:shadow-[0_0_24px_-10px_color-mix(in_oklab,var(--color-signal)_55%,transparent)]">
+                <div className="flex items-center justify-between gap-3">
+                  <span className="grid h-10 w-10 place-items-center rounded-2xl bg-[color:var(--color-signal)]/15 text-[color:var(--color-signal)]">
+                    <Icon className="h-5 w-5" />
+                  </span>
+                  <span className="rounded-full border border-emerald-500/20 bg-emerald-500/10 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.24em] text-emerald-400">
+                    {card.status}
+                  </span>
+                </div>
+                <h3 className="mt-4 text-lg font-semibold tracking-tight">{card.title}</h3>
+                <p className="mt-2 text-sm leading-6 text-muted-foreground">{card.description}</p>
+              </div>
+            </Reveal>
+          );
+        })}
+      </div>
+    </section>
+  );
+}
+
+function Achievements() {
+  const stats = [
+    { value: "10+", label: "Projects Completed" },
+    { value: "8+", label: "Technologies Used" },
+    { value: "6+", label: "Professional Certifications" },
+    { value: "100%", label: "Responsive Design" },
+  ];
+
+  return (
+    <section id="achievements" className="mt-16">
+      <Reveal>
+        <SectionLabel>achievements</SectionLabel>
+      </Reveal>
+      <Reveal delay={80}>
+        <div className="mb-8">
+          <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
+            <span className="text-signal-gradient">Achievements</span>
+          </h2>
+        </div>
+      </Reveal>
+
+      <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+        {stats.map((stat, index) => (
+          <Reveal key={stat.label} delay={index * 100}>
+            <div className="glass group rounded-3xl p-5 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[color:var(--color-signal)]/40 hover:shadow-[0_0_24px_-10px_color-mix(in_oklab,var(--color-signal)_55%,transparent)]">
+              <div className="text-4xl font-semibold text-signal-gradient sm:text-5xl">
+                <Counter target={stat.value} delay={index * 140} />
+              </div>
+              <div className="mt-2 font-mono text-[11px] uppercase tracking-widest text-muted-foreground">
+                {stat.label}
+              </div>
+            </div>
+          </Reveal>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function FeaturedProject() {
   const [idx, setIdx] = useState(0);
   const [activeCaseStudy, setActiveCaseStudy] = useState<string | null>(null);
@@ -1141,6 +1345,19 @@ function FeaturedProject() {
               </li>
             ))}
           </ul>
+
+          {active.highlights && active.highlights.length > 0 && (
+            <div className="mt-4 flex flex-wrap gap-2">
+              {active.highlights.map((highlight) => (
+                <span
+                  key={highlight}
+                  className="rounded-full border border-[color:var(--color-signal)]/20 bg-[color:var(--color-signal)]/10 px-2.5 py-1 text-[11px] text-[color:var(--color-signal)]"
+                >
+                  ✓ {highlight}
+                </span>
+              ))}
+            </div>
+          )}
 
           {/* Device mockup */}
           <div className="mt-6">
@@ -1958,11 +2175,6 @@ function Footer() {
   const footerLinks = [
     { Icon: Github, href: "https://github.com/rmuneeb-dev", label: "GitHub" },
     {
-      Icon: Figma,
-      href: "https://www.figma.com/files/team/1419611005212553123/recents-and-sharing?fuid=1419611003164434547",
-      label: "Figma",
-    },
-    {
       Icon: Linkedin,
       href: "https://www.linkedin.com/in/muneeb-rehman-7353382a3",
       label: "LinkedIn",
@@ -1971,23 +2183,65 @@ function Footer() {
   ];
 
   return (
-    <footer className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-[color:var(--color-border)] pt-6 text-sm text-muted-foreground sm:flex-row">
-      <span className="font-mono text-xs">
-        © {new Date().getFullYear()} muneeb_rehman // built with care
-      </span>
-      <div className="flex items-center gap-2">
-        {footerLinks.map(({ Icon, href, label }) => (
-          <a
-            key={label}
-            href={href}
-            target="_blank"
-            rel="noreferrer"
-            aria-label={label}
-            className="grid h-9 w-9 place-items-center rounded-lg border border-[color:var(--color-border)] transition-colors hover:border-[color:var(--color-signal)] hover:text-[color:var(--color-signal)]"
-          >
-            <Icon className="h-4 w-4" />
-          </a>
-        ))}
+    <footer className="mt-10 border-t border-[color:var(--color-border)] pt-6">
+      <div className="rounded-[28px] border border-[color:var(--color-border)] bg-[color:var(--color-surface)]/40 p-6 shadow-[0_0_24px_-10px_color-mix(in_oklab,var(--color-signal)_45%,transparent)] sm:p-8">
+        <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between">
+          <div className="max-w-xl">
+            <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-[color:var(--color-signal)]">
+              developer footer
+            </p>
+            <p className="mt-3 text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
+              © {new Date().getFullYear()} Muneeb Rehman
+            </p>
+            <p className="mt-2 text-sm leading-6 text-muted-foreground">
+              Crafting modern web experiences with React & TypeScript.
+            </p>
+          </div>
+
+          <div className="grid gap-6 sm:grid-cols-2 lg:min-w-[360px] lg:grid-cols-2">
+            <div>
+              <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-muted-foreground">
+                Built with
+              </p>
+              <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
+                <li>• React</li>
+                <li>• TypeScript</li>
+                <li>• Vite</li>
+                <li>• Tailwind CSS</li>
+              </ul>
+            </div>
+            <div>
+              <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-muted-foreground">
+                Connect
+              </p>
+              <div className="mt-3 flex flex-wrap items-center gap-2">
+                {footerLinks.map(({ Icon, href, label }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={label}
+                    className="grid h-9 w-9 place-items-center rounded-lg border border-[color:var(--color-border)] transition-all duration-300 hover:-translate-y-0.5 hover:border-[color:var(--color-signal)] hover:text-[color:var(--color-signal)]"
+                  >
+                    <Icon className="h-4 w-4" />
+                  </a>
+                ))}
+              </div>
+              <p className="mt-4 text-sm text-muted-foreground">
+                Designed in Figma
+                <br />
+                Hosted on Vercel
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-8 border-t border-[color:var(--color-border)] pt-4 text-sm text-muted-foreground">
+          <p>
+            Designed and developed with attention to detail, performance, and accessibility.
+          </p>
+        </div>
       </div>
     </footer>
   );
