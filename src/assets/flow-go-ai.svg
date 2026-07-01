@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-label="Flow Go AI preview">
+  <defs>
+    <linearGradient id="flow-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#161127"/>
+      <stop offset="100%" stop-color="#0d1424"/>
+    </linearGradient>
+    <linearGradient id="flow-accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#22d3ee"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="420" rx="32" fill="#070a11"/>
+  <rect x="44" y="48" width="552" height="324" rx="28" fill="url(#flow-bg)" stroke="rgba(255,255,255,0.08)"/>
+  <rect x="92" y="88" width="456" height="244" rx="24" fill="#101727" stroke="rgba(255,255,255,0.08)"/>
+  <circle cx="220" cy="210" r="82" fill="url(#flow-accent)" opacity="0.16"/>
+  <path d="M234 152c20 0 36 16 36 36v34h-72v-34c0-20 16-36 36-36Z" fill="#f8fafc" opacity="0.95"/>
+  <path d="M208 224h50v44h-50z" fill="#8b5cf6"/>
+  <path d="M266 224h44v44h-44z" fill="#22d3ee"/>
+  <rect x="326" y="140" width="150" height="22" rx="11" fill="url(#flow-accent)"/>
+  <rect x="326" y="176" width="118" height="12" rx="6" fill="rgba(255,255,255,0.28)"/>
+  <rect x="326" y="202" width="100" height="12" rx="6" fill="rgba(255,255,255,0.2)"/>
+  <rect x="326" y="236" width="138" height="18" rx="9" fill="#111d31" stroke="rgba(255,255,255,0.12)"/>
+  <rect x="326" y="266" width="90" height="14" rx="7" fill="rgba(255,255,255,0.18)"/>
+  <text x="92" y="364" fill="rgba(255,255,255,0.94)" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="600">Flow Go</text>
+</svg>

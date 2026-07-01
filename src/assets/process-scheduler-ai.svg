@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-label="Process Scheduler AI preview">
+  <defs>
+    <linearGradient id="ps-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c1424"/>
+      <stop offset="100%" stop-color="#101a2c"/>
+    </linearGradient>
+    <linearGradient id="ps-accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="420" rx="32" fill="#060b14"/>
+  <rect x="42" y="44" width="556" height="332" rx="28" fill="url(#ps-bg)" stroke="rgba(255,255,255,0.08)"/>
+  <rect x="102" y="94" width="436" height="232" rx="24" fill="#0f1c2f" stroke="rgba(255,255,255,0.08)"/>
+  <rect x="132" y="124" width="92" height="52" rx="14" fill="#1d2e43"/>
+  <rect x="254" y="124" width="92" height="52" rx="14" fill="#1d2e43"/>
+  <rect x="376" y="124" width="132" height="52" rx="14" fill="#1d2e43"/>
+  <rect x="132" y="222" width="376" height="72" rx="18" fill="#142439"/>
+  <path d="M182 176v46" stroke="url(#ps-accent)" stroke-width="8" stroke-linecap="round"/>
+  <path d="M304 176v46" stroke="#f59e0b" stroke-width="8" stroke-linecap="round"/>
+  <path d="M442 176v46" stroke="#f472b6" stroke-width="8" stroke-linecap="round"/>
+  <rect x="154" y="242" width="72" height="12" rx="6" fill="#34d399"/>
+  <rect x="250" y="242" width="92" height="12" rx="6" fill="#38bdf8"/>
+  <rect x="374" y="242" width="86" height="12" rx="6" fill="rgba(255,255,255,0.24)"/>
+  <text x="102" y="364" fill="rgba(255,255,255,0.94)" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="600">Process Scheduler</text>
+</svg>

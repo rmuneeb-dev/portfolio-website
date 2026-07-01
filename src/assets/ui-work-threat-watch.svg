@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-label="Threat Watch preview">
+  <rect width="640" height="420" rx="32" fill="#07111d"/>
+  <rect x="28" y="28" width="584" height="364" rx="24" fill="url(#bg)"/>
+  <rect x="72" y="72" width="220" height="260" rx="20" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.2)"/>
+  <circle cx="182" cy="174" r="56" fill="#ff7a59"/>
+  <rect x="96" y="252" width="112" height="14" rx="7" fill="rgba(255,255,255,0.3)"/>
+  <rect x="96" y="278" width="90" height="10" rx="5" fill="rgba(255,255,255,0.2)"/>
+  <rect x="332" y="94" width="216" height="40" rx="12" fill="rgba(255,255,255,0.1)"/>
+  <rect x="332" y="156" width="196" height="18" rx="9" fill="rgba(255,255,255,0.16)"/>
+  <rect x="332" y="190" width="158" height="14" rx="7" fill="rgba(255,255,255,0.12)"/>
+  <rect x="332" y="236" width="232" height="92" rx="20" fill="rgba(255,255,255,0.08)"/>
+  <rect x="358" y="260" width="98" height="16" rx="8" fill="rgba(255,255,255,0.16)"/>
+  <rect x="358" y="286" width="156" height="12" rx="6" fill="rgba(255,255,255,0.1)"/>
+  <text x="72" y="356" fill="rgba(255,255,255,0.95)" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="600">Threat Watch</text>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#18263a"/>
+      <stop offset="100%" stop-color="#0b0f16"/>
+    </linearGradient>
+  </defs>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-label="OS AI Command Center preview">
+  <rect width="640" height="420" rx="32" fill="#060b14"/>
+  <rect x="28" y="28" width="584" height="364" rx="24" fill="url(#bg)"/>
+  <rect x="70" y="76" width="220" height="114" rx="18" fill="rgba(255,255,255,0.1)"/>
+  <rect x="330" y="76" width="232" height="84" rx="18" fill="rgba(255,255,255,0.08)"/>
+  <rect x="70" y="218" width="492" height="112" rx="24" fill="rgba(255,255,255,0.08)"/>
+  <rect x="96" y="104" width="116" height="14" rx="7" fill="rgba(255,255,255,0.2)"/>
+  <rect x="96" y="132" width="82" height="10" rx="5" fill="rgba(255,255,255,0.14)"/>
+  <circle cx="442" cy="118" r="36" fill="#6ee7ff" opacity="0.95"/>
+  <rect x="356" y="244" width="112" height="16" rx="8" fill="rgba(255,255,255,0.18)"/>
+  <rect x="356" y="274" width="168" height="12" rx="6" fill="rgba(255,255,255,0.12)"/>
+  <rect x="96" y="252" width="224" height="14" rx="7" fill="rgba(255,255,255,0.18)"/>
+  <rect x="96" y="282" width="184" height="12" rx="6" fill="rgba(255,255,255,0.12)"/>
+  <text x="70" y="358" fill="rgba(255,255,255,0.95)" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="600">OS AI Command Center</text>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a2740"/>
+      <stop offset="100%" stop-color="#090f1d"/>
+    </linearGradient>
+  </defs>
+</svg>

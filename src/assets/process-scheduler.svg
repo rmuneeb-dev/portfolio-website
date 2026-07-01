@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-label="Process Scheduler preview">
+  <rect width="640" height="420" rx="32" fill="#07111f"/>
+  <rect x="56" y="62" width="528" height="296" rx="24" fill="#0f1d2d" stroke="rgba(255,255,255,0.12)"/>
+  <rect x="88" y="94" width="184" height="112" rx="16" fill="#13233c"/>
+  <rect x="292" y="94" width="260" height="112" rx="16" fill="#13233c"/>
+  <rect x="88" y="228" width="464" height="92" rx="16" fill="#172a44"/>
+  <rect x="112" y="118" width="72" height="14" rx="7" fill="#6ee7ff"/>
+  <rect x="112" y="144" width="116" height="10" rx="5" fill="rgba(255,255,255,0.35)"/>
+  <rect x="316" y="118" width="88" height="12" rx="6" fill="#8b5cf6"/>
+  <rect x="316" y="146" width="136" height="10" rx="5" fill="rgba(255,255,255,0.3)"/>
+  <rect x="316" y="168" width="124" height="10" rx="5" fill="rgba(255,255,255,0.2)"/>
+  <rect x="112" y="252" width="84" height="14" rx="7" fill="#34d399"/>
+  <rect x="210" y="252" width="92" height="14" rx="7" fill="#f59e0b"/>
+  <rect x="320" y="252" width="74" height="14" rx="7" fill="#f472b6"/>
+  <rect x="408" y="252" width="124" height="14" rx="7" fill="rgba(255,255,255,0.24)"/>
+  <circle cx="512" cy="320" r="22" fill="#6ee7ff" opacity="0.9"/>
+  <text x="92" y="360" fill="rgba(255,255,255,0.95)" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="600">Process Scheduler</text>
+</svg>
