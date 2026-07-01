@@ -47,7 +47,8 @@ import osAiDesign from "@/assets/mobile screen os ai.png";
 import connectXDesign from "@/assets/connect x mobile screen.png";
 import flowGoDesign from "@/assets/mobile screen flow go.png";
 import tubbzMobile from "@/assets/for tubbz mobile screen only.jpeg";
-import smartphoneMockup from "@/assets/Smartphone_mockup_digital_sticke…_202607012203.jpeg";
+import tubbzSimple from "@/assets/tubbz.jpeg";
+import tubbzMobileOnly from "@/assets/tubbz just for mobile.jpeg";
 import { WireframeCube } from "@/components/portfolio/WireframeCube";
 import {
   CommandPalette,
@@ -631,7 +632,7 @@ const MOBILE_PREVIEWS: Record<string, string> = {
   // Use OS AI design for Process Scheduler mobile preview per request.
   "Process Scheduler": osAiDesign,
   // Use the mobile-specific Tubbz image for phone preview.
-  "Tubbz": tubbzMobile,
+  "Tubbz": tubbzMobileOnly,
   // Fallbacks: if a mobile-specific image isn't available, the desktop preview will be used.
 };
 
@@ -1378,7 +1379,7 @@ function FeaturedProject() {
             <div className="block lg:hidden">
               <DevicePhone
                 name={active.name}
-                image={MOBILE_PREVIEWS[active.name] ?? smartphoneMockup ?? active.image}
+                image={MOBILE_PREVIEWS[active.name] ?? active.image}
               />
             </div>
             <div className="hidden lg:block">
