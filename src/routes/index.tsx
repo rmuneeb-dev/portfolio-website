@@ -88,7 +88,7 @@ function Index() {
       <MobileTopBar onOpenCmd={() => cmd.setOpen(true)} />
       <CommandPalette open={cmd.open} onOpenChange={cmd.setOpen} />
 
-      <main className="relative z-10 mx-auto max-w-[1280px] px-4 pb-24 pt-20 lg:pl-28 lg:pr-8 lg:pt-10">
+      <main className="relative z-10 mx-auto max-w-[1280px] px-3 pb-16 pt-16 sm:px-4 sm:pb-24 sm:pt-18 lg:pl-28 lg:pr-8 lg:pb-24 lg:pt-10">
         <Hero />
         <About />
         <WhyHireMe />
@@ -171,9 +171,9 @@ function Hero() {
   const [resumePreviewOpen, setResumePreviewOpen] = useState(false);
 
   return (
-    <section id="home" className="grid gap-4 pt-6 lg:grid-cols-12">
+    <section id="home" className="grid items-center gap-4 pt-2 sm:pt-4 lg:grid-cols-12 lg:pt-6">
       {/* Main hero card */}
-      <div className="glass relative col-span-12 overflow-hidden rounded-3xl p-8 lg:col-span-8 lg:p-12">
+      <div className="glass relative col-span-12 flex min-h-[360px] flex-col justify-center overflow-hidden rounded-3xl p-4 sm:min-h-[420px] sm:p-6 lg:col-span-8 lg:min-h-0 lg:justify-start lg:p-12">
         <div className="relative z-10">
           <SectionLabel>portfolio // online</SectionLabel>
           <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[color:var(--color-signal)]/30 bg-[color:var(--color-signal)]/10 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.24em] text-[color:var(--color-signal)]">
@@ -189,10 +189,10 @@ function Hero() {
           <p className="mt-5 max-w-2xl text-base text-muted-foreground sm:text-lg">
             I build fast, responsive, and accessible web applications using React, TypeScript, and modern frontend technologies. Passionate about transforming complex ideas into clean, intuitive digital experiences with a strong focus on performance, usability, and scalable UI architecture.
           </p>
-          <div className="mt-7 flex flex-wrap items-center gap-3">
+          <div className="mt-6 flex flex-col flex-wrap items-stretch gap-2.5 sm:mt-7 sm:flex-row sm:items-center sm:gap-3">
             <a
               href="#projects"
-              className="btn-water-solid group inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-medium glow-ring"
+              className="btn-water-solid group inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-medium glow-ring sm:justify-start"
             >
               <span className="inline-flex items-center gap-2">
                 Explore my work
@@ -202,7 +202,7 @@ function Hero() {
             <button
               type="button"
               onClick={() => setResumePreviewOpen(true)}
-              className="btn-water inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-medium"
+              className="btn-water inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-medium sm:justify-start"
             >
               <span className="inline-flex items-center gap-2">
                 <Download className="h-4 w-4" />
@@ -213,7 +213,7 @@ function Hero() {
         </div>
 
         {/* Wireframe cube backdrop */}
-        <div className="pointer-events-none absolute -right-10 -top-10 h-[520px] w-[520px] opacity-95">
+        <div className="pointer-events-none absolute -right-6 -top-8 h-[280px] w-[280px] opacity-95 sm:-right-8 sm:-top-8 sm:h-[360px] sm:w-[360px] lg:-right-10 lg:-top-10 lg:h-[520px] lg:w-[520px]">
           <WireframeCube className="h-full w-full" />
         </div>
 
@@ -231,7 +231,7 @@ function Hero() {
       </div>
 
       {/* ID card */}
-      <aside className="glass-strong col-span-12 flex flex-col gap-4 rounded-3xl p-6 lg:col-span-4">
+      <aside className="glass-strong col-span-12 flex flex-col gap-4 rounded-3xl p-4 sm:p-6 lg:col-span-4">
         <div className="flex items-center justify-between">
           <span className="label-mono">// system_id</span>
           <span className="flex items-center gap-1.5 rounded-full bg-[color:var(--color-signal)]/15 px-2.5 py-1 font-mono text-[10px] uppercase tracking-widest text-[color:var(--color-signal)]">
@@ -1316,7 +1316,7 @@ function FeaturedProject() {
   return (
     <section id="projects" className="mt-16">
       <SectionLabel>featured_project</SectionLabel>
-      <div className="glass grid gap-6 rounded-3xl p-6 sm:p-8 lg:grid-cols-12">
+      <div className="glass grid gap-4 rounded-3xl p-4 sm:gap-6 sm:p-6 lg:grid-cols-12 lg:p-8">
         <div className="lg:col-span-7">
           <div className="flex items-center gap-2">
             <span className="font-mono text-[11px] uppercase tracking-widest text-[color:var(--color-signal)]">
@@ -1424,12 +1424,12 @@ function FeaturedProject() {
         {/* Thumbnail rail */}
         <div className="lg:col-span-5">
           <div className="label-mono mb-2">// all_cases</div>
-          <ul className="flex gap-2 overflow-x-auto pb-2 lg:flex-col lg:overflow-visible">
+          <ul className="flex flex-col gap-2 overflow-visible pb-0 lg:flex-col lg:overflow-visible">
             {FEATURED.map((p, i) => (
               <li key={p.name} className="shrink-0 lg:shrink">
                 <button
                   onClick={() => setIdx(i)}
-                  className={`group flex w-full min-w-[200px] items-center gap-3 rounded-2xl border p-3 text-left transition-colors ${
+                  className={`group flex w-full min-w-0 items-center gap-3 rounded-2xl border p-3 text-left transition-colors ${
                     i === idx
                       ? "border-[color:var(--color-signal)] bg-[color:var(--color-signal)]/10"
                       : "border-[color:var(--color-border)] hover:border-[color:var(--color-signal)]/40"
@@ -1493,7 +1493,9 @@ function DeviceLaptop({
               <img
                 src={image}
                 alt={`${name} preview`}
-                className="h-64 w-full object-cover"
+                loading="lazy"
+                decoding="async"
+                className="h-56 w-full object-contain sm:h-64 sm:object-cover"
               />
             ) : (
               <div className="grid h-64 grid-cols-3 gap-2 p-2">
@@ -1541,6 +1543,8 @@ function DevicePhone({
               <img
                 src={image}
                 alt={`${name} preview`}
+                loading="lazy"
+                decoding="async"
                 className="h-40 w-full object-contain bg-[color:var(--color-background)]"
               />
             ) : (
@@ -1651,7 +1655,9 @@ function DesignShowcase() {
                         <img
                           src={d.image}
                           alt={`${d.label} preview`}
-                          className="aspect-[9/19] w-full object-cover object-top bg-[color:var(--color-background)]"
+                          loading="lazy"
+                          decoding="async"
+                          className="aspect-[9/19] w-full object-contain object-top bg-[color:var(--color-background)] sm:object-cover"
                         />
                       </div>
                     </div>
@@ -1781,13 +1787,13 @@ function Experience() {
         </p>
       </Reveal>
 
-      <div className="glass relative overflow-hidden rounded-3xl p-6 sm:p-8">
-        <div className="pointer-events-none absolute left-6 top-0 h-full w-px bg-gradient-to-b from-[color:var(--color-signal)]/0 via-[color:var(--color-signal)]/80 to-[color:var(--color-signal)]/0" />
-        <div className="space-y-5">
+      <div className="glass relative overflow-hidden rounded-3xl p-4 sm:p-6 md:p-8">
+        <div className="pointer-events-none absolute left-3 top-0 hidden h-full w-px bg-gradient-to-b from-[color:var(--color-signal)]/0 via-[color:var(--color-signal)]/80 to-[color:var(--color-signal)]/0 sm:left-6 sm:block" />
+        <div className="space-y-4 sm:space-y-5">
           {TIMELINE.map((t, i) => (
             <Reveal key={t.role} delay={120 + i * 120}>
-              <div className="group relative rounded-2xl border border-[color:var(--color-border)]/70 bg-[color:var(--color-surface)]/35 p-4 pl-8 transition-all duration-500 hover:-translate-y-1 hover:border-[color:var(--color-signal)]/50 hover:bg-[color:var(--color-surface)]/60 hover:shadow-[0_0_28px_-10px_color-mix(in_oklab,var(--color-signal)_55%,transparent)]">
-                <span className="absolute left-[-10px] top-5 grid h-5 w-5 place-items-center rounded-full border border-[color:var(--color-signal)]/70 bg-[color:var(--color-background)] shadow-[0_0_16px_color-mix(in_oklab,var(--color-signal)_40%,transparent)]">
+              <div className="group relative rounded-2xl border border-[color:var(--color-border)]/70 bg-[color:var(--color-surface)]/35 p-4 pl-4 transition-all duration-500 hover:-translate-y-1 hover:border-[color:var(--color-signal)]/50 hover:bg-[color:var(--color-surface)]/60 hover:shadow-[0_0_28px_-10px_color-mix(in_oklab,var(--color-signal)_55%,transparent)] sm:pl-8">
+                <span className="absolute left-2 top-5 grid h-5 w-5 place-items-center rounded-full border border-[color:var(--color-signal)]/70 bg-[color:var(--color-background)] shadow-[0_0_16px_color-mix(in_oklab,var(--color-signal)_40%,transparent)] sm:left-[-10px]">
                   <span className="h-2 w-2 rounded-full bg-[color:var(--color-signal)]" />
                 </span>
                 <div className="flex flex-wrap items-center justify-between gap-2">
@@ -1838,14 +1844,14 @@ function TechAndGithub() {
           <p className="mt-2 text-sm text-muted-foreground">
             Tools I reach for without thinking.
           </p>
-          <div className="mt-6 grid grid-cols-4 gap-3">
+          <div className="mt-6 grid grid-cols-2 gap-2 sm:grid-cols-4 sm:gap-3">
             {TECH.map((t, i) => (
               <Reveal key={t.name} delay={i * 60}>
-                <div className="group flex min-h-[110px] flex-col items-center justify-center gap-2.5 overflow-hidden rounded-xl border border-[color:var(--color-border)] bg-[color:var(--color-surface)]/40 px-2 py-3 text-center text-muted-foreground transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:border-[color:var(--color-signal)]/60 hover:bg-[color:var(--color-surface)]/70 hover:text-[color:var(--color-signal)] hover:shadow-[0_0_24px_-4px_color-mix(in_oklab,var(--color-signal)_55%,transparent)]">
+                <div className="group flex min-h-[96px] flex-col items-center justify-center gap-2 overflow-hidden rounded-xl border border-[color:var(--color-border)] bg-[color:var(--color-surface)]/40 px-2 py-3 text-center text-muted-foreground transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:border-[color:var(--color-signal)]/60 hover:bg-[color:var(--color-surface)]/70 hover:text-[color:var(--color-signal)] hover:shadow-[0_0_24px_-4px_color-mix(in_oklab,var(--color-signal)_55%,transparent)] sm:min-h-[110px] sm:gap-2.5">
                   <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-black/10 p-1.5 transition-colors duration-300 group-hover:bg-black/15">
                     <t.Icon className="h-8 w-8 shrink-0 transition-all duration-300 group-hover:scale-[1.05] group-hover:brightness-110" />
                   </div>
-                  <span className="w-full whitespace-nowrap px-1 font-mono text-[10px] leading-tight tracking-[0.16em] text-muted-foreground transition-colors duration-300 group-hover:text-[color:var(--color-signal)] sm:text-[10.5px]">
+                  <span className="w-full whitespace-normal break-words px-1 font-mono text-[10px] leading-tight tracking-[0.16em] text-muted-foreground transition-colors duration-300 group-hover:text-[color:var(--color-signal)] sm:whitespace-nowrap sm:text-[10.5px]">
                     {t.name}
                   </span>
                 </div>
@@ -1945,11 +1951,11 @@ function GithubStatGrid() {
     return () => obs.disconnect();
   }, []);
   return (
-    <div ref={ref} className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
+    <div ref={ref} className="mt-6 grid grid-cols-2 gap-2 sm:grid-cols-4 sm:gap-3">
       {GITHUB_STATS.map((s, i) => (
         <div
           key={s.title}
-          className="glass group relative overflow-hidden rounded-2xl p-4 transition-[transform,opacity,box-shadow,border-color] duration-700 hover:-translate-y-1 hover:border-[color:var(--color-signal)]/60 hover:shadow-[0_0_30px_-8px_color-mix(in_oklab,var(--color-signal)_60%,transparent)]"
+          className="glass group relative overflow-hidden rounded-2xl p-3 transition-[transform,opacity,box-shadow,border-color] duration-700 hover:-translate-y-1 hover:border-[color:var(--color-signal)]/60 hover:shadow-[0_0_30px_-8px_color-mix(in_oklab,var(--color-signal)_60%,transparent)] sm:p-4"
           style={{
             transitionDelay: `${i * 110}ms`,
             transitionTimingFunction: "cubic-bezier(0.22, 1, 0.36, 1)",
