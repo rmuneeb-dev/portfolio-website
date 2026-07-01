@@ -1544,15 +1544,14 @@ function DevicePhone({
       <div className="rounded-[28px] border border-[color:var(--color-border)] bg-[color:var(--color-surface)] p-2 shadow-2xl">
         <div className="rounded-[22px] bg-gradient-to-b from-[color:var(--color-surface-2)] to-black p-2">
           <div className="mx-auto mb-2 h-1.5 w-10 rounded-full bg-white/20" />
-          <div className="overflow-hidden rounded-[18px] bg-[color:var(--color-background)]">
+          <div className="overflow-hidden rounded-[18px] bg-[color:var(--color-background)] aspect-[9/19]">
             {image ? (
               <img
                 src={image}
                 alt={`${name} preview`}
                 loading="lazy"
                 decoding="async"
-                className="w-full object-contain object-center bg-[color:var(--color-background)]"
-                style={{ aspectRatio: "9 / 19" }}
+                className="w-full h-full object-contain object-center bg-[color:var(--color-background)]"
               />
             ) : (
               <div className="space-y-1.5 p-2">
