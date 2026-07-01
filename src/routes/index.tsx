@@ -47,6 +47,7 @@ import osAiDesign from "@/assets/mobile screen os ai.png";
 import connectXDesign from "@/assets/connect x mobile screen.png";
 import flowGoDesign from "@/assets/mobile screen flow go.png";
 import tubbzMobile from "@/assets/for tubbz mobile screen only.jpeg";
+import smartphoneMockup from "@/assets/Smartphone_mockup_digital_sticke…_202607012203.jpeg";
 import { WireframeCube } from "@/components/portfolio/WireframeCube";
 import {
   CommandPalette,
@@ -1377,7 +1378,7 @@ function FeaturedProject() {
             <div className="block lg:hidden">
               <DevicePhone
                 name={active.name}
-                image={MOBILE_PREVIEWS[active.name] ?? active.image}
+                image={MOBILE_PREVIEWS[active.name] ?? smartphoneMockup ?? active.image}
               />
             </div>
             <div className="hidden lg:block">
