@@ -1307,15 +1307,6 @@ function Achievements() {
     </section>
   );
 }
-                {stat.label}
-              </div>
-            </div>
-          </Reveal>
-        ))}
-      </div>
-    </section>
-  );
-}
 
 function FeaturedProject() {
   const [idx, setIdx] = useState(0);
