@@ -1359,9 +1359,14 @@ function FeaturedProject() {
             </div>
           )}
 
-          {/* Device mockup */}
+          {/* Device mockup: show phone on small screens, laptop on large screens */}
           <div className="mt-6 w-full overflow-hidden">
-            <DeviceLaptop className="w-full" name={active.name} image={active.image} />
+            <div className="block lg:hidden">
+              <DevicePhone name={active.name} image={active.image} />
+            </div>
+            <div className="hidden lg:block">
+              <DeviceLaptop className="w-full" name={active.name} image={active.image} />
+            </div>
           </div>
 
           <div className="mt-5 flex flex-wrap items-center gap-2">
