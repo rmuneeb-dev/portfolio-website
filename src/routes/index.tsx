@@ -1290,7 +1290,7 @@ function Achievements() {
         </div>
       </Reveal>
 
-      <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+      <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 xl:grid-cols-4">
         {stats.map((stat, index) => (
           <Reveal key={stat.label} delay={index * 100}>
             <div className="glass group rounded-3xl p-5 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[color:var(--color-signal)]/40 hover:shadow-[0_0_24px_-10px_color-mix(in_oklab,var(--color-signal)_55%,transparent)]">
@@ -1298,6 +1298,15 @@ function Achievements() {
                 <Counter target={stat.value} delay={index * 140} />
               </div>
               <div className="mt-2 font-mono text-[11px] uppercase tracking-widest text-muted-foreground">
+                {stat.label}
+              </div>
+            </div>
+          </Reveal>
+        ))}
+      </div>
+    </section>
+  );
+}
                 {stat.label}
               </div>
             </div>
@@ -1339,7 +1348,7 @@ function FeaturedProject() {
             {active.tech.map((t) => (
               <li
                 key={t}
-                className="rounded-md border border-[color:var(--color-border)] bg-[color:var(--color-surface)]/40 px-2.5 py-1 font-mono text-[11px] text-foreground"
+                className="rounded-md border border-[color:var(--color-border)] bg-[color:var(--color-surface)]/40 px-2.5 py-1 font-mono text-[10px] sm:text-[11px] text-foreground"
               >
                 {t}
               </li>
@@ -1351,7 +1360,7 @@ function FeaturedProject() {
               {active.highlights.map((highlight) => (
                 <span
                   key={highlight}
-                  className="rounded-full border border-[color:var(--color-signal)]/20 bg-[color:var(--color-signal)]/10 px-2.5 py-1 text-[11px] text-[color:var(--color-signal)]"
+                  className="rounded-full border border-[color:var(--color-signal)]/20 bg-[color:var(--color-signal)]/10 px-2.5 py-1 text-[10px] sm:text-[11px] text-[color:var(--color-signal)]"
                 >
                   ✓ {highlight}
                 </span>
@@ -1360,34 +1369,34 @@ function FeaturedProject() {
           )}
 
           {/* Device mockup */}
-          <div className="mt-6">
+          <div className="mt-6 w-full overflow-hidden">
             <DeviceLaptop className="w-full" name={active.name} image={active.image} />
           </div>
 
-          <div className="mt-5 flex items-center gap-2">
+          <div className="mt-5 flex flex-wrap items-center gap-2">
             <button
               onClick={() => setIdx((i) => (i - 1 + FEATURED.length) % FEATURED.length)}
-              className="grid h-9 w-9 place-items-center rounded-full border border-[color:var(--color-border)] hover:border-[color:var(--color-signal)] hover:text-[color:var(--color-signal)]"
+              className="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-[color:var(--color-border)] hover:border-[color:var(--color-signal)] hover:text-[color:var(--color-signal)]"
               aria-label="Previous project"
             >
               <ChevronLeft className="h-4 w-4" />
             </button>
             <button
               onClick={() => setIdx((i) => (i + 1) % FEATURED.length)}
-              className="grid h-9 w-9 place-items-center rounded-full border border-[color:var(--color-border)] hover:border-[color:var(--color-signal)] hover:text-[color:var(--color-signal)]"
+              className="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-[color:var(--color-border)] hover:border-[color:var(--color-signal)] hover:text-[color:var(--color-signal)]"
               aria-label="Next project"
             >
               <ChevronRight className="h-4 w-4" />
             </button>
-            <div className="ml-auto flex items-center gap-2">
+            <div className="ml-auto flex flex-wrap items-center gap-2 justify-end">
               {active.caseStudyKey && (
                 <button
                   type="button"
                   onClick={() => setActiveCaseStudy(active.caseStudyKey ?? null)}
-                  className="btn-water inline-flex items-center gap-1.5 rounded-full px-4 py-2 font-mono text-[11px] uppercase tracking-widest text-[color:var(--color-signal)]"
+                  className="btn-water inline-flex items-center gap-1.5 rounded-full px-3 py-2 sm:px-4 font-mono text-[10px] sm:text-[11px] uppercase tracking-widest text-[color:var(--color-signal)] whitespace-nowrap"
                 >
                   <span className="inline-flex items-center gap-1.5">
-                    View Case Study <ExternalLink className="h-3 w-3" />
+                    Case Study <ExternalLink className="h-3 w-3" />
                   </span>
                 </button>
               )}
@@ -1396,7 +1405,7 @@ function FeaturedProject() {
                   href={active.figmaUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-water inline-flex items-center gap-1.5 rounded-full px-4 py-2 font-mono text-[11px] uppercase tracking-widest"
+                  className="btn-water inline-flex items-center gap-1.5 rounded-full px-3 py-2 sm:px-4 font-mono text-[10px] sm:text-[11px] uppercase tracking-widest whitespace-nowrap"
                 >
                   <span className="inline-flex items-center gap-1.5">
                     <Figma className="h-3.5 w-3.5" />
@@ -1409,7 +1418,7 @@ function FeaturedProject() {
                   href={active.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-water inline-flex items-center gap-1.5 rounded-full px-4 py-2 font-mono text-[11px] uppercase tracking-widest"
+                  className="btn-water inline-flex items-center gap-1.5 rounded-full px-3 py-2 sm:px-4 font-mono text-[10px] sm:text-[11px] uppercase tracking-widest whitespace-nowrap"
                 >
                   <span className="inline-flex items-center gap-1.5">
                     <Github className="h-3.5 w-3.5" />
@@ -1424,9 +1433,9 @@ function FeaturedProject() {
         {/* Thumbnail rail */}
         <div className="lg:col-span-5">
           <div className="label-mono mb-2">// all_cases</div>
-          <ul className="flex flex-col gap-2 overflow-visible pb-0 lg:flex-col lg:overflow-visible">
+          <ul className="flex flex-col gap-2 overflow-x-auto lg:overflow-visible pb-2 lg:pb-0">
             {FEATURED.map((p, i) => (
-              <li key={p.name} className="shrink-0 lg:shrink">
+              <li key={p.name} className="shrink-0 lg:shrink min-w-full lg:min-w-0">
                 <button
                   onClick={() => setIdx(i)}
                   className={`group flex w-full min-w-0 items-center gap-3 rounded-2xl border p-3 text-left transition-colors ${
@@ -1477,7 +1486,7 @@ function DeviceLaptop({
   image?: string;
 }) {
   return (
-    <div className={`relative ${className ?? ""}`}>
+    <div className={`relative w-full ${className ?? ""}`}>
       <div className="rounded-t-2xl border border-[color:var(--color-border)] bg-[color:var(--color-surface)]/60 p-2 shadow-2xl">
         <div className="rounded-lg bg-gradient-to-br from-[color:var(--color-surface-2)] to-black p-3">
           <div className="mb-2 flex items-center gap-1">
@@ -1495,7 +1504,8 @@ function DeviceLaptop({
                 alt={`${name} preview`}
                 loading="lazy"
                 decoding="async"
-                className="h-56 w-full object-contain sm:h-64 sm:object-cover"
+                className="w-full h-auto object-contain sm:object-cover"
+                style={{ minHeight: "200px" }}
               />
             ) : (
               <div className="grid h-64 grid-cols-3 gap-2 p-2">
@@ -1537,7 +1547,7 @@ function DevicePhone({
     <div className={`relative mx-auto w-[150px] ${className ?? ""}`}>
       <div className="rounded-[28px] border border-[color:var(--color-border)] bg-[color:var(--color-surface)] p-2 shadow-2xl">
         <div className="rounded-[22px] bg-gradient-to-b from-[color:var(--color-surface-2)] to-black p-2">
-          <div className="mx-auto mb-2 h-1 w-10 rounded-full bg-white/20" />
+          <div className="mx-auto mb-2 h-1.5 w-10 rounded-full bg-white/20" />
           <div className="overflow-hidden rounded-[18px] bg-[color:var(--color-background)]">
             {image ? (
               <img
@@ -1545,7 +1555,8 @@ function DevicePhone({
                 alt={`${name} preview`}
                 loading="lazy"
                 decoding="async"
-                className="h-40 w-full object-contain bg-[color:var(--color-background)]"
+                className="w-full h-auto object-contain object-top bg-[color:var(--color-background)] sm:object-cover"
+                style={{ aspectRatio: "9 / 19" }}
               />
             ) : (
               <div className="space-y-1.5 p-2">
