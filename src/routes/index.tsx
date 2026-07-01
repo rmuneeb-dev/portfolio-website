@@ -1551,7 +1551,7 @@ function DevicePhone({
                 alt={`${name} preview`}
                 loading="lazy"
                 decoding="async"
-                className="w-full h-auto object-contain object-top bg-[color:var(--color-background)] sm:object-cover"
+                className="w-full object-contain object-center bg-[color:var(--color-background)]"
                 style={{ aspectRatio: "9 / 19" }}
               />
             ) : (
@@ -1664,7 +1664,7 @@ function DesignShowcase() {
                           alt={`${d.label} preview`}
                           loading="lazy"
                           decoding="async"
-                          className="aspect-[9/19] w-full object-contain object-top bg-[color:var(--color-background)] sm:object-cover"
+                          className="aspect-[9/19] w-full object-contain object-center bg-[color:var(--color-background)]"
                         />
                       </div>
                     </div>
