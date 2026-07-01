@@ -1526,7 +1526,7 @@ const TIMELINE = [
   {
     icon: Palette,
     role: " junior UI/UX Designer & frontend developer ",
-    org: "BitslabStudio ",
+    org: "Bits lab Studio ",
     when: "2026",
     body: "Shipped onboarding & dashboard flows for B2B SaaS clients Designed and developed responsive UI components and modern dashboard interfaces..",
   },
