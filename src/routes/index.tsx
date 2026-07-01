@@ -46,6 +46,7 @@ import threatWatchDesign from "@/assets/mobile screen threat watch.png";
 import osAiDesign from "@/assets/mobile screen os ai.png";
 import connectXDesign from "@/assets/connect x mobile screen.png";
 import flowGoDesign from "@/assets/mobile screen flow go.png";
+import tubbzMobile from "@/assets/for tubbz mobile screen only.jpeg";
 import { WireframeCube } from "@/components/portfolio/WireframeCube";
 import {
   CommandPalette,
@@ -628,8 +629,8 @@ const MOBILE_PREVIEWS: Record<string, string> = {
   "Flow Go": flowGoDesign,
   // Use OS AI design for Process Scheduler mobile preview per request.
   "Process Scheduler": osAiDesign,
-  // Use the existing tubbz preview image for Tubbz mobile preview (mobile-specific asset not present).
-  "Tubbz": tubbzPreview,
+  // Use the mobile-specific Tubbz image for phone preview.
+  "Tubbz": tubbzMobile,
   // Fallbacks: if a mobile-specific image isn't available, the desktop preview will be used.
 };
 
