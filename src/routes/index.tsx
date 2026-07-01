@@ -621,6 +621,18 @@ const FEATURED = [
   },
 ];
 
+// Map featured project names to mobile preview images used inside the phone mockup.
+const MOBILE_PREVIEWS: Record<string, string> = {
+  "Connect X": connectXDesign,
+  "Threat Watch": threatWatchDesign,
+  "Flow Go": flowGoDesign,
+  // Use OS AI design for Process Scheduler mobile preview per request.
+  "Process Scheduler": osAiDesign,
+  // Use the existing tubbz preview image for Tubbz mobile preview (mobile-specific asset not present).
+  "Tubbz": tubbzPreview,
+  // Fallbacks: if a mobile-specific image isn't available, the desktop preview will be used.
+};
+
 const RESUME_FILE_URL = new URL("../Muneeb_Rehman_CV.pdf.pdf", import.meta.url).href;
 
 const CASE_STUDY_FILES: Record<
@@ -1362,7 +1374,10 @@ function FeaturedProject() {
           {/* Device mockup: show phone on small screens, laptop on large screens */}
           <div className="mt-6 w-full overflow-hidden">
             <div className="block lg:hidden">
-              <DevicePhone name={active.name} image={active.image} />
+              <DevicePhone
+                name={active.name}
+                image={MOBILE_PREVIEWS[active.name] ?? active.image}
+              />
             </div>
             <div className="hidden lg:block">
               <DeviceLaptop className="w-full" name={active.name} image={active.image} />
@@ -1544,14 +1559,15 @@ function DevicePhone({
       <div className="rounded-[28px] border border-[color:var(--color-border)] bg-[color:var(--color-surface)] p-2 shadow-2xl">
         <div className="rounded-[22px] bg-gradient-to-b from-[color:var(--color-surface-2)] to-black p-2">
           <div className="mx-auto mb-2 h-1.5 w-10 rounded-full bg-white/20" />
-          <div className="overflow-hidden rounded-[18px] bg-[color:var(--color-background)] aspect-[9/19]">
+          <div className="overflow-hidden rounded-[18px] bg-[color:var(--color-background)]">
             {image ? (
               <img
                 src={image}
                 alt={`${name} preview`}
                 loading="lazy"
                 decoding="async"
-                className="w-full h-full object-contain object-center bg-[color:var(--color-background)]"
+                className="w-full object-contain object-center bg-[color:var(--color-background)]"
+                style={{ aspectRatio: "9 / 19" }}
               />
             ) : (
               <div className="space-y-1.5 p-2">
