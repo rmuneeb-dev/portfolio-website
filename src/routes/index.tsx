@@ -632,7 +632,7 @@ const MOBILE_PREVIEWS: Record<string, string> = {
   // Use OS AI design for Process Scheduler mobile preview per request.
   "Process Scheduler": osAiDesign,
   // Use the mobile-specific Tubbz image for phone preview.
-  "Tubbz": tubbzMobileOnly,
+  "Tubbz": tubbzMobile,
   // Fallbacks: if a mobile-specific image isn't available, the desktop preview will be used.
 };
 
