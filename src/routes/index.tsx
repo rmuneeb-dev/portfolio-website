@@ -46,7 +46,7 @@ import threatWatchDesign from "@/assets/mobile screen threat watch.png";
 import osAiDesign from "@/assets/mobile screen os ai.png";
 import connectXDesign from "@/assets/connect x mobile screen.png";
 import flowGoDesign from "@/assets/mobile screen flow go.png";
-import tubbzMobile from "@/assets/for tubbz mobile screen only.jpeg";
+import tubbzMobile from "@/assets/tubbz just for mobile.jpeg";
 import tubbzSimple from "@/assets/tubbz.jpeg";
 import tubbzMobileOnly from "@/assets/tubbz just for mobile.jpeg";
 import { WireframeCube } from "@/components/portfolio/WireframeCube";
@@ -1569,7 +1569,7 @@ function DevicePhone({
                 alt={`${name} preview`}
                 loading="lazy"
                 decoding="async"
-                className="w-full object-contain object-center bg-[color:var(--color-background)]"
+                className="w-full h-full object-cover bg-[color:var(--color-background)]"
                 style={{ aspectRatio: "9 / 19" }}
               />
             ) : (
