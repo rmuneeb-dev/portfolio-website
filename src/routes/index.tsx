@@ -49,6 +49,7 @@ import flowGoDesign from "@/assets/mobile screen flow go.png";
 import tubbzMobile from "@/assets/tubbz just for mobile.jpeg";
 import tubbzSimple from "@/assets/tubbz.jpeg";
 import tubbzMobileOnly from "@/assets/tubbz just for mobile.jpeg";
+import mobileAppShowcase from "@/assets/Mobile_app_showcase.jpeg";
 import { WireframeCube } from "@/components/portfolio/WireframeCube";
 import {
   CommandPalette,
@@ -632,7 +633,7 @@ const MOBILE_PREVIEWS: Record<string, string> = {
   // Use OS AI design for Process Scheduler mobile preview per request.
   "Process Scheduler": osAiDesign,
   // Use the mobile-specific Tubbz image for phone preview.
-  "Tubbz": tubbzMobile,
+  "Tubbz": mobileAppShowcase,
   // Fallbacks: if a mobile-specific image isn't available, the desktop preview will be used.
 };
 
@@ -1350,16 +1351,18 @@ function FeaturedProject() {
           <p className="mt-4 max-w-xl text-sm text-muted-foreground sm:text-base">
             {active.blurb}
           </p>
-          <ul className="mt-5 flex flex-wrap gap-2">
-            {active.tech.map((t) => (
-              <li
-                key={t}
-                className="rounded-md border border-[color:var(--color-border)] bg-[color:var(--color-surface)]/40 px-2.5 py-1 font-mono text-[10px] sm:text-[11px] text-foreground"
-              >
-                {t}
-              </li>
-            ))}
-          </ul>
+          {!["Connect X", "Flow Go", "Tubbz"].includes(active.name) && (
+            <ul className="mt-5 flex flex-wrap gap-2">
+              {active.tech.map((t) => (
+                <li
+                  key={t}
+                  className="rounded-md border border-[color:var(--color-border)] bg-[color:var(--color-surface)]/40 px-2.5 py-1 font-mono text-[10px] sm:text-[11px] text-foreground"
+                >
+                  {t}
+                </li>
+              ))}
+            </ul>
+          )}
 
           {active.highlights && active.highlights.length > 0 && (
             <div className="mt-4 flex flex-wrap gap-2">
