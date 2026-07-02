@@ -576,6 +576,15 @@ const FEATURED = [
       "Modern real-time chatting experience with instant messaging, presence, rich conversations, and a polished mobile-first UI.",
     tech: ["React", "Firebase", "Tailwind", "Socket.io"],
     highlights: ["Responsive Design", "TypeScript", "Performance Optimized", "Mobile First"],
+    role: "UI/UX Designer",
+    contributions: [
+      "User Interface Design",
+      "User Experience Design",
+      "User Flow",
+      "Design System",
+      "Interactive Prototype",
+    ],
+    tools: "Figma",
     caseStudyKey: "connect-x",
     figmaUrl: "https://www.figma.com/design/WAPMhZFr5XftEBlrzX8eUb/Connect-X?node-id=0-1&p=f&t=lvtZ7Py9UNg8Iu1j-0",
     image: connectXPreview,
@@ -587,6 +596,15 @@ const FEATURED = [
       "Django and Chart.js dashboard surfacing live threat telemetry with custom filters, timeline views, and incident monitoring.",
     tech: ["Django", "Chart.js", "Postgres"],
     highlights: ["Responsive Design", "Performance Optimized", "Modern UI", "GitHub Repository"],
+    role: "Frontend Developer",
+    contributions: [
+      "React Development",
+      "TypeScript Development",
+      "Responsive UI",
+      "Component Architecture",
+      "Dashboard Implementation",
+    ],
+    tools: "React • TypeScript • Tailwind CSS",
     caseStudyKey: "threat-watch",
     github: "https://github.com/rmuneeb-dev/Threat-watch",
     image: threatWatchPreview,
@@ -598,6 +616,14 @@ const FEATURED = [
       "Online store for airbuds, headphones, earbuds, wireless audio accessories, and related electronics with a smooth shopping experience.",
     tech: ["React", "TypeScript", "Stripe", "Tailwind"],
     highlights: ["Responsive Design", "TypeScript", "Modern UI", "Component Based"],
+    role: "UI/UX Designer",
+    contributions: [
+      "User Interface Design",
+      "User Experience Design",
+      "Design System",
+      "Interactive Prototype",
+    ],
+    tools: "Figma",
     caseStudyKey: "flow-go",
     figmaUrl: "https://www.figma.com/design/ukQrtvZbRGlKU89rBKCc38/Flow-Go-Design?node-id=0-1&p=f&t=P0sAy1GRxNz4Aptw-0",
     image: flowGoPreview,
@@ -609,6 +635,14 @@ const FEATURED = [
       "Sticker collection and shopping application focused on browsing, favorites, and a delightful digital storefront experience.",
     tech: ["Next.js", "React", "Postgres", "Stripe"],
     highlights: ["Responsive Design", "Modern UI", "Mobile First", "SEO Friendly"],
+    role: "UI/UX Designer",
+    contributions: [
+      "User Interface Design",
+      "User Experience Design",
+      "Design System",
+      "Interactive Prototype",
+    ],
+    tools: "Figma",
     caseStudyKey: "tubbz",
     figmaUrl: "https://www.figma.com/design/SbAAe9JQxiRAxOBPxc5iSw/Tubbzz?node-id=0-1&p=f&t=9bBOQE34M2h6adKp-0",
     image: tubbzPreview,
@@ -619,6 +653,14 @@ const FEATURED = [
     blurb: "Visual simulator for FCFS, SJF, and Round Robin scheduling with live process timelines and queue behavior.",
     tech: ["C++", "SFML", "Algorithms"],
     highlights: ["Performance Optimized", "Component Based", "Modern UI", "GitHub Repository"],
+    role: "C++ Developer",
+    contributions: [
+      "Process Scheduling",
+      "Queue Management",
+      "Algorithm Implementation",
+      "Console Application",
+    ],
+    tools: "C++",
     caseStudyKey: "process-scheduler",
     github: "https://github.com/rmuneeb-dev/OS-Ai-command-center-",
     image: processSchedulerPreview,
@@ -1477,6 +1519,58 @@ function FeaturedProject() {
                     </span>
                   </span>
                 </button>
+                
+                {/* Role & Contribution Card - shown when project is selected */}
+                {i === idx && p.role && (
+                  <div className="mt-2 rounded-lg border border-[color:var(--color-border)] bg-[color:var(--color-surface)]/30 p-3 backdrop-blur-sm text-sm">
+                    <div className="space-y-2">
+                      <div>
+                        <p className="font-mono text-[9px] uppercase tracking-widest text-[color:var(--color-signal)]">
+                          Role
+                        </p>
+                        <p className="mt-0.5 text-xs font-medium text-foreground">
+                          {p.role}
+                        </p>
+                      </div>
+                      {p.contributions && p.contributions.length > 0 && (
+                        <div>
+                          <p className="font-mono text-[9px] uppercase tracking-widest text-[color:var(--color-signal)]">
+                            Contribution
+                          </p>
+                          <ul className="mt-0.5 space-y-0.5">
+                            {p.contributions.map((contribution) => (
+                              <li key={contribution} className="text-xs text-muted-foreground">
+                                • {contribution}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+                      {p.tools && (
+                        <div>
+                          <p className="font-mono text-[9px] uppercase tracking-widest text-[color:var(--color-signal)]">
+                            {p.tools.includes("•") ? "Tools" : "Tool"}
+                          </p>
+                          <div className="mt-0.5 flex flex-wrap gap-1">
+                            {p.tools.includes("•")
+                              ? p.tools.split("•").map((tool) => (
+                                  <span
+                                    key={tool.trim()}
+                                    className="inline-flex rounded-md border border-[color:var(--color-border)] bg-[color:var(--color-surface)]/60 px-2 py-0.5 text-[9px] text-muted-foreground"
+                                  >
+                                    {tool.trim()}
+                                  </span>
+                                ))
+                              : <span className="inline-flex rounded-md border border-[color:var(--color-border)] bg-[color:var(--color-surface)]/60 px-2 py-0.5 text-[9px] text-muted-foreground">
+                                  {p.tools}
+                                </span>
+                            }
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                )}
               </li>
             ))}
           </ul>
